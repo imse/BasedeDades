@@ -4,7 +4,7 @@
 --
 ------------------------------------------------------------------------------------------------
 
-CREATE DATABASE SGAE_Practica;
+CREATE DATABASE S1_MOVIES;
 
 SET TRANSACTION READ WRITE;  
 BEGIN WORK;
