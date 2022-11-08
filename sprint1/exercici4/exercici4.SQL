@@ -1,0 +1,8 @@
+-- Exercici 4
+-- Per a cada persona, el seu nom i el nombre màxim de rols diferents que ha tingut en una mateixa pel·lícula.
+SELECT person_name, count(role_name) AS "Num max rols"  FROM movies.tb_role R, movies.tb_person P, movies.tb_movie_person M WHERE R.role_id = M.role_id AND M.person_id = P.person_id GROUP BY person_name;
+ -- Mostra únicament aquelles persones que hagin assumit més d'un rol en una mateixa pel·lícula.
+ 
+ SELECT person_name, count(role_name) AS "Num max rols"  FROM movies.tb_role R, movies.tb_person P, movies.tb_movie_person M WHERE R.role_id = M.role_id AND M.person_id = P.person_id 
+ GROUP BY person_name  
+ HAVING COUNT(role_name)>1;
